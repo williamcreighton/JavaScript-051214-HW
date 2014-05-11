@@ -5,11 +5,11 @@
 // I run directly in console using "return" instead of "console.log" it 
 // returns results without issue.
 
-// var LOST = [[4, 8], [15, 16], [23, 42]]
+var flattened = [[4, 8], [15, 16], [23, 42]]
 
-// LOST.reduce(function(previousValue, currentValue, index, array) {
-//     console.log(previousValue + currentValue);
-// });
+flattened.reduce(function(previousValue, currentValue, index, array) {
+    console.log(previousValue + currentValue);
+});
 
 // --> [4, 8, 15, 16, 23, 42]
 
@@ -17,41 +17,42 @@
 // not. This is the example from MDN and I can't get it to run in the
 // console without an error either.
 
-// // var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+// var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
 //     return a.concat(b);
 // });
+
 // flattened is [0, 1, 2, 3, 4, 5] ... can't get this to output correctly
 // when I run it in console.
 
 // using .reduce with the Math operators.
 
-// [4, 8, 15, 16, 23, 42].reduce(function(x, y){
-//   console.log(x + y);
-// })
+[4, 8, 15, 16, 23, 42].reduce(function(x, y){
+  console.log(x + y);
+})
 
 // --> 108
 
-// [4, 8, 15, 16, 23, 42].reduce(function(x, y){
-//   console.log(x - y);
-// })
+[4, 8, 15, 16, 23, 42].reduce(function(x, y){
+  console.log(x - y);
+})
 
 // --> -100
 
-// [4, 8, 15, 16, 23, 42].reduce(function(x, y){
-//   console.log(x * y);
-// })
+[4, 8, 15, 16, 23, 42].reduce(function(x, y){
+  console.log(x * y);
+})
 
 // --> 7418880
 
-// [4, 8, 15, 16, 23, 42].reduce(function(x, y){
-//   console.log(x / y);
-// })
+[4, 8, 15, 16, 23, 42].reduce(function(x, y){
+  console.log(x / y);
+})
 
 // --> 0.0000021566597653554177
 
-// [4, 8, 15, 16, 23, 42].reduce(function(x, y){
-//   console.log(x % y);
-// })
+[4, 8, 15, 16, 23, 42].reduce(function(x, y){
+  console.log(x % y);
+})
 
 // --> 4
 
