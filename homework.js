@@ -213,7 +213,7 @@ senateData.objects.map(function(data) {
 // in this instance.
 
 // senateData.objects.map(function(data) {
-//   if (data.gender == female)
+//   if (data.gender === female)
 //   console.log(data.firstname, data.lastname);
 // })
 
@@ -256,6 +256,7 @@ senateData.objects.map(function(data) {
 
 
 // Here's the data!
+
 var items = [{
   "listing_id": 161489961,
   "state": "active",
@@ -1287,13 +1288,28 @@ var items = [{
 
 // console.log("The average price is" ... + ".")
 
-items.reduce(function(data) {
+items.map(function(data) {
   return data.price;
 })
 
-// var itemPrice = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5];   
+var itemPrice = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5];
 
+itemPrice.reduce(function(x, y){
+  return x + y;
+})
 
+var totalPrice = 590.65;
+
+function findAvg (total, length) {
+  return total / length
+}
+
+findAvg (totalPrice, itemPrice.length)
+
+console.log("The average price is" + "$" [findAvg (totalPrice, itemPrice.length).slice(0,1)] + ".")
+
+// --> "The average price is $23.625999999999998." ... BUT I NEED TO ROUND TO 2 DECIMAL POINTS! AND CREATE LESS VARIABLES.
+// HOW TO SLIM DOWN??????????????????
 
 // console.log(itemPrice / items.length);
 
@@ -1310,7 +1326,7 @@ items.reduce(function(data) {
 
 
 
-Bonus Question #2 ... 
+// Bonus Question #2 ... 
 
 items.forEach(function(data) {
   if (data.currency_code === "GBP") 
